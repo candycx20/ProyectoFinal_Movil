@@ -4,6 +4,7 @@ import { LoginScreen } from '../screens/auth/LoginScreen';
 import { RegisterScreen } from '../screens/auth/RegisterScreen';
 import { HomeScreen } from '../screens/home/HomeScreen';
 import { ProductScreen } from '../screens/product/ProductScreen';
+import { CategoryScreen } from '../screens/pages/category/CategoryScreen';
 
 export type RootStackParams = {
   LoadingScreen: undefined;
@@ -11,6 +12,7 @@ export type RootStackParams = {
   RegisterScreen: undefined;
   HomeScreen: undefined;
   ProductScreen: { productId: string };
+  CategoryScreen: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -28,6 +30,7 @@ export const StackNavigator = () => {
       <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="ProductScreen" component={ProductScreen} />
+      <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
     </Stack.Navigator>
   );
 };

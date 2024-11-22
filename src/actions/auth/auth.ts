@@ -28,7 +28,6 @@ const returnUserToken = async (token: string): Promise<User | null> => {
 
 export const authLogin = async (username: string, password: string) => {
     try {
-        console.log('Loooos usuarios__________', username, password)
         const { data: tokens } = await tesloApi.post<AuthResponse>('token/', {
             username,
             password
